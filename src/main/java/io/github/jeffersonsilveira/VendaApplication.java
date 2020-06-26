@@ -1,5 +1,7 @@
 package io.github.jeffersonsilveira;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +15,12 @@ public class VendaApplication {
         SpringApplication.run(VendaApplication.class, args);
     }
 
+    @Autowired
+    @Qualifier("applicationName")
+    private String applicationName;
+
     @GetMapping("hello")
     public String helloWord() {
-        return "Hello Word teste";
+        return applicationName;
     }
 }
