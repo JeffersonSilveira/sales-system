@@ -22,3 +22,5 @@ public class VendaApplication {
     @GetMapping("hello")
     public String helloWord() {
         return applicationName;
+    }
+}
