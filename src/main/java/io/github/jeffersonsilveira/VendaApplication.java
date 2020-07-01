@@ -9,13 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@ComponentScan(
-        basePackages = {
-            "io.github.jeffersonsilveira.repository",
-            "io.github.jeffersonsilveira.service",
-            "com.umaoutrabiblioteca.projeto"
-        }
-)
 @RestController
 public class VendaApplication {
 
